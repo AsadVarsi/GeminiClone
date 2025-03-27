@@ -8,11 +8,11 @@ const Sidebar = () => {
   const { setInput, setRecentPrompt, setShowResult } = useContext(Context);
 
   // Function to handle "New Chat" click
-  const handleNewChat = () => {
-    setInput(""); // Clear input
-    setRecentPrompt(""); // Clear previous prompt
-    setShowResult(false); // Hide previous chat results
-  };
+  // const handleNewChat = () => {
+  //   setInput(""); // Clear input
+  //   setRecentPrompt(""); // Clear previous prompt
+  //   setShowResult(false); // Hide previous chat results
+  // };
 
   return (
     <div className='sidebar'>
@@ -24,7 +24,7 @@ const Sidebar = () => {
           onClick={() => setExtended(!extended)} 
         />
 
-        <div className="new-chat" onClick={handleNewChat}>
+        <div className="new-chat">
           <img src={assets.plus_icon} alt="New Chat" />
           {extended ? <p>New Chat</p> : null}
         </div>

@@ -90,7 +90,7 @@ function Main() {
                     onKeyDown={handleKeyDown} 
                     placeholder='Ask Gemini' 
                 />
-                <div>
+                <div class="cursor">
                     <img src={assets.mic_icon} alt="" />
                     <img src={assets.gallery_icon} alt="" />
                     <img src={assets.send_icon} onClick={handleSend} alt="" />

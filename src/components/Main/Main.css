@@ -108,6 +108,9 @@
 
     
 }
+.cursor{
+    cursor: pointer;
+}
 .main img{
     width: 20px;
 } 
