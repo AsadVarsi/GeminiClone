@@ -111,8 +111,8 @@
 } 
 .main input{
     background: transparent;
-    border: none;
-
+    /* border: none; */
+    width: 100%;
 }
 .main-bottom .search-box div{
     display: flex;
