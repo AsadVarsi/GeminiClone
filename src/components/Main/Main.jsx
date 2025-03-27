@@ -7,6 +7,22 @@ import { Context } from '../../context/Context'
 function Main() {
 
     const {onSent,recentPrompt,showResult,loading,resultData,setInput,input} = useContext(Context)
+
+    const handleSend = () => {
+        if (input.trim() !== "") { 
+            onSent();  
+            setInput("");  
+        }
+    };
+
+    // Function to handle Enter key press
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();  
+            handleSend();
+        }
+    };
+    
     console.log(recentPrompt+"hellp");
   return (
     <div className='main'>
@@ -67,11 +83,17 @@ function Main() {
         }     
         <div className="main-bottom">
             <div className="search-box">
-                <input type="text" onChange={(e)=>{setInput(e.target.value)}} placeholder='Ask Gemini' />
+                <input  
+                    type="text" 
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)} 
+                    onKeyDown={handleKeyDown} 
+                    placeholder='Ask Gemini' 
+                />
                 <div>
                     <img src={assets.mic_icon} alt="" />
                     <img src={assets.gallery_icon} alt="" />
-                    <img src={assets.send_icon} onClick={(e)=>{onSent()}} alt="" />
+                    <img src={assets.send_icon} onClick={handleSend} alt="" />
                 </div>
             </div>
             <p className='bottom-info'>

@@ -42,6 +42,7 @@
 .main .greet span{
     background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .main .cards
@@ -103,6 +104,7 @@
     padding: 15px;
     margin: auto;
     border-radius: 50px;
+    margin-bottom: 20px ;
 
     
 }
@@ -111,8 +113,10 @@
 } 
 .main input{
     background: transparent;
-    /* border: none; */
+    outline: none;
+    border: none;
     width: 100%;
+    font-size: 18px;
 }
 .main-bottom .search-box div{
     display: flex;
@@ -124,6 +128,7 @@
     position: absolute;
     bottom: 2px;
     padding: 2px 200px;
+    /* margin-top: 100px; */
     
 }
 .main .result
